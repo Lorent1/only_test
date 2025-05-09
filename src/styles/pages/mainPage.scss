@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .main {
   margin: 0 auto;
   max-width: 1440px;
@@ -5,7 +7,9 @@
   border-left: 1px solid var(--line-color);
   border-right: 1px solid var(--line-color);
 
-  @media (width < 500px) {
+  background: linear-gradient(var(--line-color), var(--line-color)) no-repeat center/1px 100%;
+
+  @include mobile{
     border-left: none;
     border-right: none;
     background: none;
@@ -41,7 +45,7 @@
       left: -1px;
     }
 
-    @media (width < 500px) {
+    @include mobile {
       padding-top: 59px;
       padding-left: 20px;
       font-size: 20px;
@@ -54,58 +58,8 @@
     }
   }
 
-  &__date-range {
-    padding-top: 96px;
-
-    @media (width < 500px) {
-      padding-top: 70px;
-    }
-  }
-
-  @media (width < 500px) {
+  @include mobile {
     min-height: 0;
     padding-bottom: 13.33px;
   }
-}
-
-.range {
-  width: 100%;
-  margin: 0 auto;
-  padding-right: 35px;
-  max-width: 973px;
-  font-weight: 700;
-  font-size: 200px;
-  line-height: 80%;
-  letter-spacing: -0.02em;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  cursor: default;
-  z-index: 1;
-
-  &_start {
-    padding: 0;
-    margin: 0;
-    color: var(--font-range-start-color);
-  }
-
-  &_end {
-    padding: 0;
-    margin: 0;
-    color: var(--font-range-end-color);
-  }
-
-  @media (width <= 1024px) {
-    padding-right: 0;
-    max-width: 660px;
-    font-size: 140px;
-  }
-
-  @media (width < 768px) {
-    padding-right: 0;
-    max-width: 273px;
-    font-size: 56px;
-  }
-
 }

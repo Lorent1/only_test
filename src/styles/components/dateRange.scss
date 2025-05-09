@@ -1,0 +1,50 @@
+@use "../breakpoints" as *;
+
+.range {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 0;
+  max-width: 660px;
+  font-weight: 700;
+  font-size: 140px;
+  line-height: 80%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  cursor: default;
+  z-index: 1;
+
+  padding-top: 86px;
+
+  &_start {
+    padding: 0;
+    margin: 0;
+    color: var(--font-range-start-color);
+  }
+
+  &_end {
+    padding: 0;
+    margin: 0;
+    color: var(--font-range-end-color);
+  }
+
+  @include desktop{
+    padding-right: 20px;
+    max-width: 970px;
+    font-size: 200px;
+  }
+
+  @include tablet{
+    padding-right: 0;
+    max-width: 400px;
+    font-size: 80px;
+  }
+
+  @include mobile {
+    max-width: 273px;
+    padding-top: 70px;
+    font-size: 56px;
+  }
+}

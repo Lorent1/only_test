@@ -1,3 +1,4 @@
+@use "breakpoints" as *;
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:wght@400;700&display=swap');
 
 body {
@@ -24,7 +25,7 @@ body {
 
   margin: 0 auto;
 
-  @media (width >= 1480px) {
+  @include desktop {
     padding-left: 320px;
     padding-right: 160px;
   }

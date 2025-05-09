@@ -1,5 +1,7 @@
+@use "../breakpoints" as *;
+
 .navigation {
-  margin-top: 137px;
+  margin-top: 146px;
   margin-left: 80px;
   order: 1;
 
@@ -13,7 +15,7 @@
     margin: 0;
     padding: 0 0 20px 0;
 
-    @media (width < 500px) {
+    @include mobile {
       padding-bottom: 10.67px;
     }
   }
@@ -49,7 +51,7 @@
       width: 8px;
       height: 8px;
 
-      @media (width < 500px) {
+      @include mobile {
         border-width: 0 2px 2px 0;
         width: 5px;
         height: 5px;
@@ -65,7 +67,7 @@
       }
     }
 
-    @media (width < 500px) {
+    @include mobile {
       height: 25px;
       width: 25px;
       padding: 0 1px 1px 0;
@@ -80,11 +82,11 @@
     }
   }
 
-  @media (width < 768px) {
+  @include tablet {
     order: 2;
   }
 
-  @media (width < 500px) {
+  @include mobile {
     max-width: 58.33px;
 
     margin-left: 20px;
