@@ -4,7 +4,6 @@ import { Slider } from '@/components/Slider';
 import { DateRange } from '@/components/DateRange';
 import { useDateRange } from '@/hooks/useDateRange';
 import { useSlider } from '@/hooks/useSlider';
-
 import '../styles/pages/mainPage.scss';
 import Navigation from '@/components/Navigation';
 import Spinner from '@/components/Spinner';
@@ -51,7 +50,7 @@ export const MainPage = () => {
           spinnerRef={spinnerRef}
           timeOfRotation={timeOfRotation}
         />
-        <Navigation curEvent={curEvent} setCurEvent={setCurEvent} loadCurrent={loadCurrent} />
+        <Navigation curEvent={curEvent} loadCurrent={loadCurrent} />
         <Slider curEvent={curEvent} sliderData={sliderData} />
         <ControlButtons curEvent={curEvent} loadCurrent={loadCurrent} />
       </section>

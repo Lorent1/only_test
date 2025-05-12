@@ -8,15 +8,15 @@ interface Props {
 }
 
 export const DateRange = ({ dateRangeData }: Props) => {
-  const { startDate, endDate, startDateRef, endDateRef } = dateRangeData;
+  const { startValueRef, endValueRef, startDateRef, endDateRef } = dateRangeData;
 
   return (
     <div className="range">
       <p className="range_start" ref={startDateRef}>
-        {startDate}
+        {startValueRef.current.value}
       </p>
       <p className="range_end" ref={endDateRef}>
-        {endDate}
+        {endValueRef.current.value}
       </p>
     </div>
   );
