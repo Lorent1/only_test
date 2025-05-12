@@ -1,0 +1,97 @@
+@use "../breakpoints" as *;
+
+.navigation {
+  margin-top: 146px;
+  margin-left: 80px;
+  order: 1;
+
+  width: 100%;
+  max-width: 120px;
+
+  &__info {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--font-main-color);
+    margin: 0;
+    padding: 0 0 20px 0;
+
+    @include mobile {
+      padding-bottom: 10.67px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--bg-color);
+    border: 1px solid rgba(66, 86, 122, 0.5);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color .1s linear;
+    padding: 0 3px 3px 0;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      border: solid var(--font-main-color);
+      border-width: 0 2px 2px 0;
+      width: 8px;
+      height: 8px;
+
+      @include mobile {
+        border-width: 0 2px 2px 0;
+        width: 5px;
+        height: 5px;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+
+      &:hover {
+        background-color: var(--bg-color);
+      }
+    }
+
+    @include mobile {
+      height: 25px;
+      width: 25px;
+      padding: 0 1px 1px 0;
+    }
+
+    &__next {
+      transform: rotate(-45deg);
+    }
+
+    &__prev {
+      transform: rotate(135deg);
+    }
+  }
+
+  @include tablet {
+    order: 2;
+  }
+
+  @include mobile {
+    max-width: 58.33px;
+
+    margin-left: 20px;
+    position: absolute;
+    bottom: 13.33px;
+    z-index: 99;
+  }
+}
